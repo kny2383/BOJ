@@ -7,7 +7,3 @@ for i in range(10) :
 div_set = set(div_list) # set은 중복을 제거하고 순서가 없다.
 div_result = list(div_set)
 print(len(div_result))
-
-
-    
-    
