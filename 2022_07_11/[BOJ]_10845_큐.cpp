@@ -2,12 +2,12 @@
 using namespace std;
 
 int queue[10001];
-int k; // ½ºÅÃÀÇ Å©±â
+int k; // íì˜ ì‚¬ì´ì¦ˆ
 
 int main() {
-	int n = 0; // ¸í·ÉÀÇ ¼ö
+	int n = 0; 
 	cin >> n;
-	string str; // ¸í·É¾î
+	string str; // ëª…ë ¹ì–´
 
 	for (int i = 0; i < n; i++) {
 		cin >> str;
@@ -21,46 +21,32 @@ int main() {
 
 		else if (str == "pop") {
 
-			if (k == 0) { // ½ºÅÃ¿¡ µé¾îÀÖ´Â Á¤¼ö°¡ ¾ø´Â °æ¿ì
-				cout << "-1" << endl;
-			}
+			if (k == 0) cout << "-1" << endl;
+			
 			else {
 				cout << queue[0] << endl;
 				for (int i = 1; i < k; i++) {
-					queue[i - 1] = queue[i]; // ±âÁ¸¿¡ ÀÖ´ø °ªµéÀ» ÇÑÄ­¾¿ ¾Õ´ç±ä´Ù.					
+					queue[i - 1] = queue[i]; // ê¸°ì¡´ì˜ ê°’ì„ í•œì¹¸ì”© ì•žë‹¹ê¸´ë‹¤.
 				}
 				k--;
 			}
 		}
 
-		else if (str == "size") {
-			cout << k << endl;
-		}
+		else if (str == "size") cout << k << endl;
 
 		else if (str == "empty") {
-			if (k == 0) {
-				cout << "1" << endl;
-			}
-			else
-				cout << "0" << endl;
+			if (k == 0) cout << "1" << endl;
+			else cout << "0" << endl;
 		}
 
 		else if (str == "front") {
-			if (k == 0) { // ½ºÅÃ¿¡ µé¾îÀÖ´Â Á¤¼ö°¡ ¾ø´Â °æ¿ì
-				cout << "-1" << endl;
-			}
-			else {
-				cout << queue[0] << endl;
-			}
+			if (k == 0) cout << "-1" << endl;
+			else cout << queue[0] << endl;
 		}
 
 		else if (str == "back") {
-			if (k == 0) { // ½ºÅÃ¿¡ µé¾îÀÖ´Â Á¤¼ö°¡ ¾ø´Â °æ¿ì
-				cout << "-1" << endl;
-			}
-			else {
-				cout << queue[k - 1] << endl;
-			}
+			if (k == 0) cout << "-1" << endl;
+			else cout << queue[k - 1] << endl;
 		}
 	}
 	return 0;
