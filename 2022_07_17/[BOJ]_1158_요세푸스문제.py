@@ -7,6 +7,6 @@ for _ in range(N):
     if index >= len(arr): 
         index %= len(arr)
     ans.append(str(arr[index]))
-    arr.pop(index)
+    arr.pop(index) # 제거
 
 print("<",', '.join(ans),">", sep="")
